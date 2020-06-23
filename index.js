@@ -53,9 +53,9 @@ const idsgenerator = async (offset) => {
 
 const request_value_generator = (message) => {
 
-    const popka = require('./userIDS.json')
+    const base = require('./userIDS.json')
 
-    let chunked_ids = popka.chunk(100)
+    let chunked_ids = base.chunk(100)
 
     const executeParams = chunked_ids.map((id) => ({
         peer_ids: id,
